@@ -9,10 +9,9 @@
 
 - 🔍 Détecte les navigateurs intégrés des principaux réseaux sociaux et applications de messagerie
 - 🧩 Fournit un hook React et une fonction utilitaire JavaScript
-- 🚀 Implémentation JavaScript pure pour une compatibilité maximale
 - 📱 Léger et facile à intégrer dans n'importe quel projet
 
-## 📲 Réseaux sociaux détectés
+## 📋 Navigateurs/Applications supportés
 
 - Facebook (`isFacebook`)
 - Instagram (`isInstagram`)
@@ -87,30 +86,6 @@ if (result.isBuiltInBrowser) {
 }
 ```
 
-## 📋 Navigateurs/Applications supportés
-
-BIB Detector peut identifier les navigateurs intégrés de :
-
-- **Réseaux sociaux** :
-  - Facebook
-  - Instagram
-  - TikTok
-  - Twitter
-  - Snapchat
-  - LinkedIn
-  - Reddit
-  - Pinterest
-
-- **Applications de messagerie** :
-  - Facebook Messenger
-  - Telegram (avec distinction Android/iOS)
-  - Discord
-  - WeChat
-  - LINE
-  - Viber
-
-## 🛠️ Référence API
-
 ### `useBuiltInBrowserDetector()`
 
 Un hook React qui retourne un objet avec les propriétés suivantes :
@@ -135,5 +110,3 @@ Une fonction utilitaire qui retourne le même objet que le hook, mais peut être
 MIT
 
 ---
-
-Made with ❤️ for web developers who need to handle in-app browsers
