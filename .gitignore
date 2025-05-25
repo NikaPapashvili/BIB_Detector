@@ -9,7 +9,6 @@ yarn.lock
 # Build
 dist/
 build/
-lib/
 .rollup.cache/
 
 # IDE

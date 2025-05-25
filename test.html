@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test BIB Detector</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .result {
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    .detected {
+      color: #00ff87;
+      font-weight: bold;
+    }
+    .not-detected {
+      color: #999;
+    }
+    .network-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .network-item {
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Test BIB Detector</h1>
+  <p>Cette page teste la bibliothèque BIB Detector pour détecter les navigateurs intégrés.</p>
+  
+  <div class="result">
+    <div id="main-result"></div>
+    <div class="network-list" id="network-list"></div>
+  </div>
+
+  <script>
+    // Fonction de détection simplifiée (copie de votre bibliothèque)
+    function detectBuiltInBrowser() {
+      // Ne s'exécute que dans un environnement navigateur
+      if (typeof window === 'undefined' || typeof navigator === 'undefined') {
+        return {
+          isBuiltInBrowser: false
+        };
+      }
+
+      const ua = navigator.userAgent.toLowerCase();
+      
+      // Détection des réseaux sociaux et navigateurs intégrés
+      const result = {
+        // Réseaux sociaux
+        isFacebook: ua.includes('fban') || ua.includes('fbav') || ua.includes('fbios'),
+        isInstagram: ua.includes('instagram'),
+        isTikTok: ua.includes('tiktok'),
+        isTwitter: ua.includes('twitter') || ua.includes('twitterandroid'),
+        isSnapchat: ua.includes('snapchat'),
+        isLinkedIn: ua.includes('linkedin'),
+        isReddit: ua.includes('reddit'),
+        isPinterest: ua.includes('pinterest'),
+        isMessenger: ua.includes('messenger') || (ua.includes('fb') && ua.includes('messenger')),
+        
+        // Détection Telegram
+        isTelegramAndroid: navigator.userAgent.includes("Android") && 
+                          typeof window.TelegramWebview !== 'undefined',
+        isTelegramIOS: navigator.userAgent.includes("iPhone") && 
+                      typeof window.TelegramWebviewProxy !== 'undefined' && 
+                      typeof window.TelegramWebviewProxyProto !== 'undefined',
+        
+        // Autres applications de messagerie et réseaux sociaux
+        isDiscord: ua.includes('discord'),
+        isWeChat: ua.includes('micromessenger'),
+        isLine: ua.includes('line'),
+        isViber: ua.includes('viber'),
+      };
+      
+      // Ajoute une propriété générale isTelegram
+      result.isTelegram = result.isTelegramAndroid || result.isTelegramIOS;
+      
+      // Ajoute une propriété pour vérifier si un réseau social a été détecté
+      result.isBuiltInBrowser = Object.entries(result)
+        .filter(([key]) => key !== 'isBuiltInBrowser' && key.startsWith('is'))
+        .some(([_, value]) => value);
+        
+      return result;
+    }
+
+    // Exécution de la détection
+    const results = detectBuiltInBrowser();
+    
+    // Affichage des résultats
+    const mainResult = document.getElementById('main-result');
+    const networkList = document.getElementById('network-list');
+    
+    if (results.isBuiltInBrowser) {
+      mainResult.innerHTML = '<span class="detected">✓ Un navigateur intégré a été détecté!</span>';
+    } else {
+      mainResult.innerHTML = '<span class="not-detected">✗ Aucun navigateur intégré détecté. Vous utilisez un navigateur web standard.</span>';
+    }
+    
+    // Liste des réseaux sociaux à afficher
+    const networks = [
+      { key: 'isFacebook', name: 'Facebook' },
+      { key: 'isInstagram', name: 'Instagram' },
+      { key: 'isTikTok', name: 'TikTok' },
+      { key: 'isTwitter', name: 'Twitter' },
+      { key: 'isSnapchat', name: 'Snapchat' },
+      { key: 'isLinkedIn', name: 'LinkedIn' },
+      { key: 'isReddit', name: 'Reddit' },
+      { key: 'isPinterest', name: 'Pinterest' },
+      { key: 'isMessenger', name: 'Messenger' },
+      { key: 'isTelegram', name: 'Telegram' },
+      { key: 'isDiscord', name: 'Discord' },
+      { key: 'isWeChat', name: 'WeChat' },
+      { key: 'isLine', name: 'LINE' },
+      { key: 'isViber', name: 'Viber' }
+    ];
+    
+    // Création des éléments pour chaque réseau social
+    networks.forEach(network => {
+      const isDetected = results[network.key];
+      const networkItem = document.createElement('div');
+      networkItem.className = 'network-item';
+      networkItem.innerHTML = `
+        <div class="${isDetected ? 'detected' : 'not-detected'}">
+          ${isDetected ? '✓' : '✗'} ${network.name}
+        </div>
+      `;
+      networkList.appendChild(networkItem);
+    });
+    
+    // Affichage des informations du navigateur
+    console.log('User Agent:', navigator.userAgent);
+    console.log('Résultats de détection:', results);
+  </script>
+</body>
+</html>
