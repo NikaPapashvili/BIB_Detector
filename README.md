@@ -12,6 +12,23 @@
 - 🚀 Implémentation JavaScript pure pour une compatibilité maximale
 - 📱 Léger et facile à intégrer dans n'importe quel projet
 
+## 📲 Réseaux sociaux détectés
+
+- Facebook (`isFacebook`)
+- Instagram (`isInstagram`)
+- TikTok (`isTikTok`)
+- Twitter (`isTwitter`)
+- Snapchat (`isSnapchat`)
+- LinkedIn (`isLinkedIn`)
+- Reddit (`isReddit`)
+- Pinterest (`isPinterest`)
+- Messenger (`isMessenger`)
+- Telegram (`isTelegram`)
+- Discord (`isDiscord`)
+- WeChat (`isWeChat`)
+- LINE (`isLine`)
+- Viber (`isViber`)
+
 ## 📦 Installation
 
 ```bash
