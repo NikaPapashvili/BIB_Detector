@@ -4,6 +4,7 @@
   "description": "A React library for detecting built-in browsers and social network webviews",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -20,6 +21,14 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikaPapashvili/BIB_Detector.git"
+  },
+  "homepage": "https://github.com/NikaPapashvili/BIB_Detector",
+  "bugs": {
+    "url": "https://github.com/NikaPapashvili/BIB_Detector/issues"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
