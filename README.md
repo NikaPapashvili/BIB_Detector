@@ -1,6 +1,6 @@
 # BIB Detector 🔍
 
-![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
+![Version](https://img.shields.io/badge/version-1.1.0-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 **BIB Detector** (Built-In Browser Detector) est une bibliothèque JavaScript légère pour détecter quand votre application web s'exécute dans un navigateur intégré à une application de réseau social ou autre.
@@ -8,7 +8,8 @@
 ## ✨ Fonctionnalités
 
 - 🔍 Détecte les navigateurs intégrés des principaux réseaux sociaux et applications de messagerie
-- 🧩 Fournit un hook React et une fonction utilitaire JavaScript
+- 🔄 Redirige les utilisateurs vers un navigateur réel pour une meilleure expérience
+- 🧩 Fournit un hook React et des fonctions utilitaires JavaScript
 - 📱 Léger et facile à intégrer dans n'importe quel projet
 
 ## 📋 Navigateurs/Applications supportés
@@ -103,6 +104,32 @@ Un hook React qui retourne un objet avec les propriétés suivantes :
 ### `detectBuiltInBrowser()`
 
 Une fonction utilitaire qui retourne le même objet que le hook, mais peut être utilisée en dehors de React.
+
+### `redirectToBrowser(url, options)`
+
+Une fonction utilitaire qui redirige l'utilisateur vers un navigateur réel en dehors de l'application intégrée.
+
+```javascript
+import { redirectToBrowser } from 'bib-detector';
+
+// Utilisation simple
+redirectToBrowser('https://example.com');
+
+// Utilisation avec options
+redirectToBrowser('https://example.com', {
+  onClose: () => console.log('Redirection tentée'),
+  iosTimeout: 2000,    // Délai avant fallback sur iOS (ms)
+  androidTimeout: 2500 // Délai avant fallback sur Android (ms)
+});
+
+// Si aucune URL n'est fournie, l'URL actuelle sera utilisée
+redirectToBrowser();
+```
+
+Cette fonction utilise différentes méthodes selon la plateforme :
+- **iOS** : Utilise le schéma `x-safari-https://` avec plusieurs fallbacks
+- **Android** : Utilise le schéma `intent://` avec fallback
+- **Desktop** : Utilise la méthode standard `window.open`
 ```
 
 ## 📄 License
