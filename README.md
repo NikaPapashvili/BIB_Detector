@@ -8,7 +8,7 @@
 ## ✨ Fonctionnalités
 
 - 🔍 Détecte les navigateurs intégrés des principaux réseaux sociaux et applications de messagerie
-- 🔄 Redirige les utilisateurs vers un navigateur réel pour une meilleure expérience
+- 🔄 Redirige les utilisateurs vers un navigateur non-embeded pour une meilleure expérience
 - 🧩 Fournit un hook React et des fonctions utilitaires JavaScript
 - 📱 Léger et facile à intégrer dans n'importe quel projet
 
