@@ -1,6 +1,6 @@
 # BIB Detector 🔍
 
-![Version](https://img.shields.io/badge/version-1.1.0-brightgreen)
+![Version](https://img.shields.io/badge/version-1.2.0-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 **BIB Detector** (Built-In Browser Detector) est une bibliothèque JavaScript légère pour détecter quand votre application web s'exécute dans un navigateur intégré à une application de réseau social ou autre.
@@ -98,6 +98,7 @@ Un hook React qui retourne un objet avec les propriétés suivantes :
   isInstagram: Boolean,      // Si Instagram a été détecté
   isTikTok: Boolean,         // Si TikTok a été détecté
   // ... et d'autres propriétés pour chaque réseau social
+  appName: String,           // Le nom de l'application détectée (ex: 'Facebook', 'Instagram', etc.)
 }
 ```
 

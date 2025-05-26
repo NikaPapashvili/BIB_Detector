@@ -24,7 +24,8 @@ export const useBuiltInBrowserDetector = () => {
     isDiscord: false,
     isWeChat: false,
     isLine: false,
-    isViber: false
+    isViber: false,
+    appName: ''
   });
 
   useEffect(() => {

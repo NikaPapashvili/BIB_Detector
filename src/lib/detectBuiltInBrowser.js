@@ -48,7 +48,58 @@ export const detectBuiltInBrowser = () => {
   result.isBuiltInBrowser = Object.entries(result)
     .filter(([key]) => key !== 'isBuiltInBrowser' && key.startsWith('is'))
     .some(([_, value]) => value);
-    
+  
+  // Détermine le nom de l'application
+  result.appName = '';
+  
+  // Utilise le premier réseau social détecté pour déterminer le nom de l'application
+  switch (true) {
+    case result.isFacebook:
+      result.appName = 'Facebook';
+      break;
+    case result.isInstagram:
+      result.appName = 'Instagram';
+      break;
+    case result.isTikTok:
+      result.appName = 'TikTok';
+      break;
+    case result.isTwitter:
+      result.appName = 'Twitter';
+      break;
+    case result.isSnapchat:
+      result.appName = 'Snapchat';
+      break;
+    case result.isLinkedIn:
+      result.appName = 'LinkedIn';
+      break;
+    case result.isReddit:
+      result.appName = 'Reddit';
+      break;
+    case result.isPinterest:
+      result.appName = 'Pinterest';
+      break;
+    case result.isMessenger:
+      result.appName = 'Messenger';
+      break;
+    case result.isTelegram:
+      result.appName = 'Telegram';
+      break;
+    case result.isDiscord:
+      result.appName = 'Discord';
+      break;
+    case result.isWeChat:
+      result.appName = 'WeChat';
+      break;
+    case result.isLine:
+      result.appName = 'LINE';
+      break;
+    case result.isViber:
+      result.appName = 'Viber';
+      break;
+    default:
+      result.appName = '';
+  }
+  
   return result;
 };
 
