@@ -126,12 +126,6 @@ redirectToBrowser('https://example.com', {
 redirectToBrowser();
 ```
 
-Cette fonction utilise différentes méthodes selon la plateforme :
-- **iOS** : Utilise le schéma `x-safari-https://` avec plusieurs fallbacks
-- **Android** : Utilise le schéma `intent://` avec fallback
-- **Desktop** : Utilise la méthode standard `window.open`
-```
-
 ## 📄 License
 
 MIT
