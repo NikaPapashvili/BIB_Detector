@@ -14,21 +14,20 @@
 
 ## 📋 Navigateurs/Applications supportés
 
-                            | IOS    | ANDROID
-- Instagram (`isInstagram`) | ❌     | ✅
-- Snapchat (`isSnapchat`)   | ❌     | ❌
-- TikTok (`isTikTok`)       | ❌     | ❌
-- Telegram (`isTelegram`)   | ❌     | ✅
-- Messenger (`isMessenger`) | ❌     | ❌
-- Twitter (`isTwitter`)     | ❌     | ❌
-- Facebook (`isFacebook`)   | ❌     | ❌
-- LinkedIn (`isLinkedIn`)   | ❌     | ❌
-- Reddit (`isReddit`)       | ❌     | ❌
-- Pinterest (`isPinterest`) | ❌     | ❌
-- WhatsApp (`isWhatsApp`)   | ❌     | ❌
-- WeChat (`isWeChat`)       | ❌     | ❌
-- LINE (`isLine`)           | ❌     | ❌
-- Viber (`isViber`)         | ❌     | ❌
+- Instagram (`isInstagram`) | IOS ❌ | ANDROID ✅
+- Snapchat (`isSnapchat`)   | IOS ❌ | ANDROID ❌
+- TikTok (`isTikTok`)       | IOS ❌ | ANDROID ❌
+- Telegram (`isTelegram`)   | IOS ❌ | ANDROID ✅
+- Messenger (`isMessenger`) | IOS ❌ | ANDROID ❌
+- Twitter (`isTwitter`)     | IOS ❌ | ANDROID ❌
+- Facebook (`isFacebook`)   | IOS ❌ | ANDROID ❌
+- LinkedIn (`isLinkedIn`)   | IOS ❌ | ANDROID ❌
+- Reddit (`isReddit`)       | IOS ❌ | ANDROID ❌
+- Pinterest (`isPinterest`) | IOS ❌ | ANDROID ❌
+- WhatsApp (`isWhatsApp`)   | IOS ❌ | ANDROID ❌
+- WeChat (`isWeChat`)       | IOS ❌ | ANDROID ❌
+- LINE (`isLine`)           | IOS ❌ | ANDROID ❌
+- Viber (`isViber`)         | IOS ❌ | ANDROID ❌
 
 ## 📦 Installation
 
