@@ -23,7 +23,6 @@ export const detectBuiltInBrowser = () => {
     isTwitter: ua.includes('twitter') || ua.includes('twitterandroid'),
     isSnapchat: ua.includes('snapchat'),
     isLinkedIn: ua.includes('linkedin'),
-    isReddit: ua.includes('reddit'),
     isPinterest: ua.includes('pinterest'),
     isMessenger: ua.includes('messenger') || (ua.includes('fb') && ua.includes('messenger')),
     

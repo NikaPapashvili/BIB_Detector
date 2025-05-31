@@ -16,7 +16,6 @@ export const useBuiltInBrowserDetector = () => {
     isTwitter: false,
     isSnapchat: false,
     isLinkedIn: false,
-    isReddit: false,
     isPinterest: false,
     isMessenger: false,
     isTelegramAndroid: false,

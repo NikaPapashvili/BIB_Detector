@@ -18,11 +18,10 @@
 - Snapchat (`isSnapchat`)   | IOS ❌ | ANDROID ❌
 - TikTok (`isTikTok`)       | IOS ❌ | ANDROID ❌
 - Telegram (`isTelegram`)   | IOS ❌ | ANDROID ✅
-- Messenger (`isMessenger`) | IOS ❌ | ANDROID ❌
+- Messenger (`isMessenger`) | IOS ❌ | ANDROID ✅
 - Twitter (`isTwitter`)     | IOS ❌ | ANDROID ❌
-- Facebook (`isFacebook`)   | IOS ❌ | ANDROID ❌
+- Facebook (`isFacebook`)   | IOS ❌ | ANDROID ✅
 - LinkedIn (`isLinkedIn`)   | IOS ❌ | ANDROID ❌
-- Reddit (`isReddit`)       | IOS ❌ | ANDROID ❌
 - Pinterest (`isPinterest`) | IOS ❌ | ANDROID ❌
 - WhatsApp (`isWhatsApp`)   | IOS ❌ | ANDROID ❌
 - WeChat (`isWeChat`)       | IOS ❌ | ANDROID ❌
