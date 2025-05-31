@@ -14,20 +14,21 @@
 
 ## 📋 Navigateurs/Applications supportés
 
-- Facebook (`isFacebook`)
-- Instagram (`isInstagram`)
-- TikTok (`isTikTok`)
-- Twitter (`isTwitter`)
-- Snapchat (`isSnapchat`)
-- LinkedIn (`isLinkedIn`)
-- Reddit (`isReddit`)
-- Pinterest (`isPinterest`)
-- Messenger (`isMessenger`)
-- Telegram (`isTelegram`)
-- Discord (`isDiscord`)
-- WeChat (`isWeChat`)
-- LINE (`isLine`)
-- Viber (`isViber`)
+                            | IOS    | ANDROID
+- Instagram (`isInstagram`) | ❌     | ✅
+- Snapchat (`isSnapchat`)   | ❌     | ❌
+- TikTok (`isTikTok`)       | ❌     | ❌
+- Telegram (`isTelegram`)   | ❌     | ✅
+- Messenger (`isMessenger`) | ❌     | ❌
+- Twitter (`isTwitter`)     | ❌     | ❌
+- Facebook (`isFacebook`)   | ❌     | ❌
+- LinkedIn (`isLinkedIn`)   | ❌     | ❌
+- Reddit (`isReddit`)       | ❌     | ❌
+- Pinterest (`isPinterest`) | ❌     | ❌
+- Discord (`isDiscord`)     | ❌     | ❌
+- WeChat (`isWeChat`)       | ❌     | ❌
+- LINE (`isLine`)           | ❌     | ❌
+- Viber (`isViber`)         | ❌     | ❌
 
 ## 📦 Installation
 
