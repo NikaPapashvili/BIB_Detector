@@ -25,7 +25,7 @@
 - LinkedIn (`isLinkedIn`)   | ❌     | ❌
 - Reddit (`isReddit`)       | ❌     | ❌
 - Pinterest (`isPinterest`) | ❌     | ❌
-- Discord (`isDiscord`)     | ❌     | ❌
+- WhatsApp (`isWhatsApp`)   | ❌     | ❌
 - WeChat (`isWeChat`)       | ❌     | ❌
 - LINE (`isLine`)           | ❌     | ❌
 - Viber (`isViber`)         | ❌     | ❌

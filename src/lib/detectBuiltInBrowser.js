@@ -35,7 +35,7 @@ export const detectBuiltInBrowser = () => {
                   typeof window.TelegramWebviewProxyProto !== 'undefined',
     
     // Autres applications de messagerie et réseaux sociaux
-    isDiscord: ua.includes('discord'),
+    isWhatsApp: ua.includes('whatsapp'),
     isWeChat: ua.includes('micromessenger'),
     isLine: ua.includes('line'),
     isViber: ua.includes('viber'),
@@ -84,8 +84,8 @@ export const detectBuiltInBrowser = () => {
     case result.isTelegram:
       result.appName = 'Telegram';
       break;
-    case result.isDiscord:
-      result.appName = 'Discord';
+    case result.isWhatsApp:
+      result.appName = 'WhatsApp';
       break;
     case result.isWeChat:
       result.appName = 'WeChat';

@@ -21,7 +21,7 @@ export const useBuiltInBrowserDetector = () => {
     isMessenger: false,
     isTelegramAndroid: false,
     isTelegramIOS: false,
-    isDiscord: false,
+    isWhatsApp: false,
     isWeChat: false,
     isLine: false,
     isViber: false,
