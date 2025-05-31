@@ -102,6 +102,23 @@ Un hook React qui retourne un objet avec les propriétés suivantes :
 }
 ```
 
+#### Utilisation de `appName`
+
+La propriété `appName` est particulièrement utile lorsque vous souhaitez afficher ou utiliser le nom de l'application détectée de manière dynamique :
+
+```jsx
+const { isBuiltInBrowser, appName } = useBuiltInBrowserDetector();
+
+return (
+  <div>
+    {isBuiltInBrowser && (
+      <p>Vous utilisez le navigateur intégré de {appName}</p>
+    )}
+  </div>
+);
+```
+```
+
 ### `detectBuiltInBrowser()`
 
 Une fonction utilitaire qui retourne le même objet que le hook, mais peut être utilisée en dehors de React.
